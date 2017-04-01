@@ -8,6 +8,11 @@
 #   iam:ListServerCertificates
 #   iam:UploadServerCertificate
 #   iam:DeleteServerCertificate
+#   iam:GetServerCertificate
+#   
+#   ## if Elastic beanstalk is used
+#   elasticbeanstalk:DescribeEnvironmentResources
+#   autoscaling:DescribeAutoScalingGroups
 ##
 
 set -e

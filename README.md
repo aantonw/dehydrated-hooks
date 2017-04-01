@@ -3,7 +3,7 @@
 Available hooks:
 
 - [Cloudflare hook](#cloudflare-hook)
-- [ELB hook](#elb-hook)
+- [Elastic Load Balancer hook](#elastic-load-balancer-hook)
 
 ## Cloudflare Hook
 
@@ -26,7 +26,7 @@ Configuration variables:
 |CLOUDFLARE\_ZONE|*[optional]* Cloudflare DNS zone, useful when using deep subdomain e.g: `this.is.deep.sub.domain.com`|(domain)|
 |ELB|*[optional]* enable ELB Hook|yes, no (no)|
 
-## ELB Hook
+## Elastic Load Balancer Hook
 
 This hook allow to deploy server certificate to IAM and update ELB with it.
 
@@ -35,10 +35,13 @@ Requirements:
 - AWS cli configured
 - IAM account with this permissions:
 	- elasticloadbalancing:DescribeLoadBalancers
-	-  elasticloadbalancing:SetLoadBalancerListenerSSLCertificate
-	-   iam:ListServerCertificates
-	-   iam:UploadServerCertificate
-	-   iam:DeleteServerCertificate	
+	- elasticloadbalancing:SetLoadBalancerListenerSSLCertificate
+	- iam:ListServerCertificates
+	- iam:UploadServerCertificate
+	- iam:DeleteServerCertificate
+	- iam:GetServerCertificate
+	- elasticbeanstalk:DescribeEnvironmentResources ** if Elastic beanstalk used instead of direct ELB name*
+	- autoscaling:DescribeAutoScalingGroups ** if Elastic beanstalk used instead of direct ELB name*
 
 |Variable|Description|Values (default)|
 |----|---|---|
@@ -47,4 +50,3 @@ Requirements:
 |ELB\_CERT\_PREFIX|Server certificate name prefix to store in IAM|(LETSENCRYPT\_CERT\_)|
 |ELB\_DELETE\_OLD\_CERT|Delete all old cert with specified prefix|yes, no (no)|	
 
-	
