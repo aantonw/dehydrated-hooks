@@ -40,8 +40,8 @@ Requirements:
 	- iam:UploadServerCertificate
 	- iam:DeleteServerCertificate
 	- iam:GetServerCertificate
-	- elasticbeanstalk:DescribeEnvironmentResources *\*if Elastic beanstalk used instead of direct ELB name*
-	- autoscaling:DescribeAutoScalingGroups *\*if Elastic beanstalk used instead of direct ELB name*
+	- elasticbeanstalk:DescribeEnvironmentResources *
+	- autoscaling:DescribeAutoScalingGroups \*<br/>\*) *required when Elastic beanstalk is used instead of direct ELB name*
 
 |Variable|Description|Values (default)|
 |----|---|---|
