@@ -3,12 +3,12 @@
 Available hooks:
 
 - [Cloudflare hook](#cloudflare-hook)
-- [Elastic Load Balancer hook](#elastic-load-balancer-hook)
+- [AWS ELB hook](#aws-elb-hook)
 
 ## Cloudflare Hook
 
 
-This hook allows to use Cloudflare DNS record to response `dns-01` challenges from Letsencrypt.
+This hook allows you to use Cloudflare DNS record to response `dns-01` challenges from Letsencrypt.
 
 Requirements:
 
@@ -26,9 +26,9 @@ Configuration variables:
 |CLOUDFLARE\_ZONE|*[optional]* Cloudflare DNS zone, useful when using deep subdomain e.g: `this.is.deep.sub.domain.com`|(domain)|
 |ELB|*[optional]* enable ELB Hook|yes, no (no)|
 
-## Elastic Load Balancer Hook
+## AWS ELB Hook
 
-This hook allow to deploy server certificate to IAM and update ELB with it.
+This hook allows you to deploy server certificate to IAM and update ELB with it.
 
 Requirements:
 
